@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <SearchView
+                android:id="@+id/home_searchview"
+                android:queryHint="请输入搜索内容"
+                android:iconifiedByDefault="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </SearchView>
+        </androidx.appcompat.widget.Toolbar>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/home_bottom_tab_layout"
+            android:layout_width="match_parent"
+            app:tabIndicatorHeight="0dp"
+            app:tabSelectedTextColor="@android:color/black"
+            app:tabTextColor="@android:color/darker_gray"
+            android:layout_height="50dp"></com.google.android.material.tabs.TabLayout>
+        <com.youth.banner.Banner
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/banner"
+            android:background="@drawable/bannerstyle"
+            android:layout_margin="@dimen/font_22"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/home_text_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/font_22"
+        android:text="精选课程"/>
+    <View
+        android:id="@+id/activity_main_home_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:alpha="0.6"
+        android:background="@android:color/darker_gray" />
+    <ListView
+        android:id="@+id/activity_main_home_listViewInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#00000000"
+        android:dividerHeight="20dp"></ListView>
+
+</LinearLayout>
